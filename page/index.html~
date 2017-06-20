@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+</head>
+	
+<body>
+  <div id="wrapper">
+
+    <div class="col-lg-3">
+       <div class="chat-panel panel panel-news">
+         <div class="panel-heading panel-heading-news">
+           <i class="fa fa-film fa-fw"></i> News
+             <span class="pull-right"><a href=""><i class="fa fa-newspaper-o"></i></a></span>
+         </div>
+         <div class="panel-body">
+          <div id="news-items">
+            <ul class="chat">
+             <li is="news-item"
+                 v-for="item in news"
+                 v-bind:item="item"
+                 >
+             </li>
+           </ul>
+         </div>
+        </div>
+       </div>
+                        <!-- /.panel-body -->
+                        
+   </div>
+                    <!-- /.panel .news-panel -->
+  </div>
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    
+    <!-- Vue JS -->
+    <script src="../vendor/vue/vue.min.js"></script>
+
+</body>
+</html>
