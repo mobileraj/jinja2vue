@@ -1,0 +1,26 @@
+{% raw %}
+Vue.component('news-item', {
+  props: ['item'],
+    template: '\
+      <li v-bind:class="item.place">{{ item.text }}\
+        <span v-bind:class="item.iplace">\
+        <a v-bind:href="item.url" target="_blank">\
+	  <img v-bind:src="item.image" class="img-circle"/></a>\
+	</span>\<br/>\
+	<span class="font-small text-muted">{{item.posted}}</span>\
+       </li>'
+})
+{% endraw %}
+new Vue({
+  el: '#news-items',
+  data: {
+        news: [
+	{% for item in news_items %}
+	      { text: "{{item.text}}",image:"{{item.image}}",posted:"{{item.posted}}",place:"{{item.place}}",iplace:"{{item.iplace}}",url:"{{item.url}}" }
+        {% if not loop.last %}
+          ,
+        {% endif %}
+	{% endfor %}
+        ]
+  }
+})

@@ -5,7 +5,7 @@ Vue.component('news-item', {
       <li v-bind:class="item.place">{{ item.text }}\
         <span v-bind:class="item.iplace">\
         <a v-bind:href="item.url" target="_blank">\
-	  <img v-bind:src="item.image" class="img-responsive center-block"/></a>\
+	  <img v-bind:src="item.image" class="img-circle"/></a>\
 	</span>\<br/>\
 	<span class="font-small text-muted">{{item.posted}}</span>\
        </li>'
